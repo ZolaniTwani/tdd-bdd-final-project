@@ -136,7 +136,7 @@ class Product(db.Model):
             if isinstance(data["available"], bool):
                 self.available = data["available"]
             else:
-                raise DataValidationError(
+                raise TypeError(
                     "Invalid type for boolean [available]: "
                     + str(type(data["available"]))
                 )
